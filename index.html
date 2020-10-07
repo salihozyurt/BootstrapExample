@@ -1,11 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS 34b2ed -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>CompDuct</title>
 </head>
+
 <body>
-    Hello World
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top" role="navigation">
+        <div class="container">
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+           <a class="navbar-brand mr-auto" href="#"><img src="img/CompDuck.png" height="30" width="41"></a>
+           <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#howItWorks"><span class="fa fa-info fa-lg"></span> About </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#searchProduct"><span class="fa fa-search fa-lg"></span> Search </a></li>
+                </ul>
+                <span class="navbar-text">
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 order-sm-last col-sm-6">
+                    <h1>Comp<span class="badge badge-danger">Pro</span>Duct</h1>
+                    <p>You can find product search easyly.</p>
+                </div>
+                <div class="col-12 col-sm order-sm-first align-self-center">
+                    <img src="img/CompDuck.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row row-content">
+           <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid"
+                                src="img/aliepress.png" alt="aliepress">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluidr" src="img/amazon.png" alt="amazon">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluidr"
+                            src="img/ebay.jpg" alt="ebay">
+                        </div>
+                    </div>
+                     <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center Content" id="howItWorks">
+            <div class="col-12 col-sm-4 order-sm-first col-md-3">
+                <h1><span class="badge badge-danger">How it works ?</span></h1>
+            </div>
+            <div class="col col-sm order-sm-last col-md">
+                <div class="media">
+                    <div class="media-body">
+                        <p>Enter the product features. Specify the price range and cargo duration you want. Add the features of the product you want. Search and find the product you want. Choose the product that interests you from the results and see the details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row-content align-items-center Content" id="searchProduct">
+            <div class="col-12">
+                <form>
+                    <div class="form-group row">
+                        <label for="dateAndTime" class="col-md-4 col-form-label">Search Product</label>
+                         <div class="col-md-7">
+                            <input type="search" class="form-control" id="search" name="search" placeholder="Search">
+                        </div>
+                        <div class="col-md-1">
+                            <a class="btn btn-primary" href="#" role="button"><span class="fa fa-search"></span></a>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="section" class="col-md-4 col-form-label">Price Range ($)</label>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="minPrice" name="minPrice" placeholder="Min Price">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" id="maxPrice" name="maxPrice" placeholder="Max Price">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="dateAndTime" class="col-md-4 col-form-label">Maximum Shipping Time</label>
+                        <div class="col-md-4">
+                            <input type="time" class="form-control" id="shippingInput" name="shippingInput">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="date" class="form-control" id="shippingInput" name="shippingInput">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="dateAndTime" class="col-md-4 col-form-label">Insert Product Property</label>
+                        <div class="col-md-7">
+                            <input type="search" class="form-control" id="shippingInput" name="shippingInput" placeholder="Product Property">
+                        </div>
+                        <div class="col-md-1">
+                            <a class="btn btn-primary" href="#" role="button">+</span></a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                         </div>
+                        <div class="col-md">
+                            <a class="btn btn-primary" href="#" role="button">Search Product</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center Content">
+            <div class="col-12 col-sm-4 col-md-3">
+                <h1>Result</h1>
+            </div>
+            <div class="col col-sm-8 col-md">
+                <div class="row row-content align-items-center">
+                    <div class="col-12 col-sm-4 col-md-3">
+                        <div class="resultContent" id="amazonResult">
+                            <h4>Headset <span class="badge badge-danger badge-default">$14.99</span></h4>
+                            <img class="d-block img-fluid" src="img/marshall.jpg" alt="amazon">
+                            <h4>Amazon</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3">
+                        <div class="resultContent" id="ebayResult">
+                            <h4>Headset <span class="badge badge-danger badge-default">$13.99</span></h4>
+                            <img class="d-block img-fluid" src="img/marshall.jpg" alt="ebay">
+                            <h4>Ebay</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-3">
+                        <div class="resultContent" id="aliexpressResult">
+                            <h4>Headset <span class="badge badge-danger badge-default">$12.99</span></h4>
+                            <img class="d-block img-fluid" src="img/marshall.jpg" alt="aliexpress">
+                            <h4>Aliexpress</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="amazonModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Headset <span class="badge badge-danger badge-default">$14.99</span> <span class="badge badge-info badge-default">Amazon</span> </h4>
+                        <button type="button" class="close" id="closeAmazonButton">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <img class="d-block img-fluid" src="img/marshall.jpg" alt="amazon">
+                                </div>
+                                <div class="form-group col-sm-8">
+                                    <p>
+                                        Iconic sound with 40 mm dynamic drivers that are custom tuned for enhanced bass response, smooth midst and crystal clear highs that draw on over 50 years of sound heritage.
+                                        Major III has a straight fit headband, slimmed down 3D hinges and rebuilt ear cushions.
+                                        Control your headphones and phone functionality with the one button remote with microphone located on your detachable 3. 5 mm cord.
+                                        When listening to music, to share audio with someone else simply have your friend Plug into the free 3. 5 mm socket.
+                                        Easy to use phone functionality makes the major III the perfect everyday companion. Answer, reject or end a call with the one button remote with microphone.
+                                        A modern classic re-engineered
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ebayModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Headset <span class="badge badge-danger badge-default">$13.99</span> <span class="badge badge-info badge-default">Ebay</span> </h4>
+                        <button type="button" class="close" id="closeEbayButton">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <img class="d-block img-fluid" src="img/marshall.jpg" alt="ebay">
+                                </div>
+                                <div class="form-group col-sm-8">
+                                    <p>
+                                        Iconic sound with 40 mm dynamic drivers that are custom tuned for enhanced bass response, smooth midst and crystal clear highs that draw on over 50 years of sound heritage.
+                                        Major III has a straight fit headband, slimmed down 3D hinges and rebuilt ear cushions.
+                                        Control your headphones and phone functionality with the one button remote with microphone located on your detachable 3. 5 mm cord.
+                                        When listening to music, to share audio with someone else simply have your friend Plug into the free 3. 5 mm socket.
+                                        Easy to use phone functionality makes the major III the perfect everyday companion. Answer, reject or end a call with the one button remote with microphone.
+                                        A modern classic re-engineered
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="aliexpressModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Headset <span class="badge badge-danger badge-default">$14.99</span> <span class="badge badge-info badge-default"> Aliexpress </span> </h4>
+                        <button type="button" class="close" id="closeAliexpressButton">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <img class="d-block img-fluid" src="img/marshall.jpg" alt="aliexpress">
+                                </div>
+                                <div class="form-group col-sm-8">
+                                    <p>
+                                        Iconic sound with 40 mm dynamic drivers that are custom tuned for enhanced bass response, smooth midst and crystal clear highs that draw on over 50 years of sound heritage.
+                                        Major III has a straight fit headband, slimmed down 3D hinges and rebuilt ear cushions.
+                                        Control your headphones and phone functionality with the one button remote with microphone located on your detachable 3. 5 mm cord.
+                                        When listening to music, to share audio with someone else simply have your friend Plug into the free 3. 5 mm socket.
+                                        Easy to use phone functionality makes the major III the perfect everyday companion. Answer, reject or end a call with the one button remote with microphone.
+                                        A modern classic re-engineered
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">             
+                <div class="col-4 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#howItWorks">How It Works</a></li>
+                        <li><a href="#searchProduct">Search</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 col-sm-5">
+                    
+                </div>
+                <div class="col-12 col-sm-4 align-self-center">
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">             
+                <div class="col-auto">
+                    <p>© Copyright 2020 Salih Özyurt</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="node_modules/jquery/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#closeAmazonButton").click(function(){
+                $("#amazonModal").modal('hide');
+            });
+            $("#amazonResult").click(function(){
+                $("#amazonModal").modal('show');
+            });
+            $("#closeEbayButton").click(function(){
+                $("#ebayModal").modal('hide');
+            });
+            $("#ebayResult").click(function(){
+                $("#ebayModal").modal('show');
+            });
+            $("#closeAliexpressButton").click(function(){
+                $("#aliexpressModal").modal('hide');
+            });
+            $("#aliexpressResult").click(function(){
+                $("#aliexpressModal").modal('show');
+            });
+        });
+    </script>
 </body>
+
 </html>
